@@ -1,10 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this code, please cite the associated paper."
-title: "LMCCR"
+message: "This identifies the repository account, not paper authorship. Cite the repository and exact commit; formal paper metadata is pending."
+title: "LMCCR: Lumbar MRI Clinical Planning, Report Generation, and Controlled Counterfactual Research"
 type: software
 version: 0.1.0
-date-released: 2026-08-30
 authors:
-  - family-names: "To be completed"
+  - name: "hericc-hash"
+    website: "https://github.com/hericc-hash"
 repository-code: "https://github.com/hericc-hash/LMCCR"
-abstract: "Paper-facing implementation of anatomy-preserving counterfactual lumbar MRI report generation."
+abstract: "Research integration of lumbar MRI clinical planning, report generation, and controlled counterfactual mechanisms. End-to-end validation remains incomplete."

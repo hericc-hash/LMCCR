@@ -1,5 +1,7 @@
 # Local weights and reproduction status
 
+> Publication update (2026-09-21) / 发布更新：源码和选定的 22 个权重已上传；所有者已授权公开。下文未上传、仅本地、缺件等表述保留为历史整合记录，当前发布范围以 [README](../README.md) 和 [权重清单](../weights/MANIFEST.json) 为准。历史安装状态不代表文件已公开或端到端验证完成。
+
 ## Scope
 
 Latest update: the runtime supplement has been integrated and one actual Development case passed automatic slice selection, HR320, axial mapping and all three visual experts. See [the single-case report](SINGLE_CASE_RUNTIME_GAPS_RESULT.md). The original weight-only findings below are superseded where noted.
