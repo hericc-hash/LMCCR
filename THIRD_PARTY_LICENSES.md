@@ -1,6 +1,6 @@
 # Third-party sources and license status / 第三方来源与许可状态
 
-The repository distributes the 22 selected project checkpoints listed in [weights/MANIFEST.json](weights/MANIFEST.json), including visual checkpoints and LoRA adapters. It does not distribute the Qwen base model or patient MRI data. The project-wide license remains pending; no blanket license for source or checkpoints is implied. 本仓库包含选定视觉权重及适配器，不包含 Qwen 基础模型和患者数据；统一项目许可证仍待确定。
+The repository distributes the 22 selected project checkpoints listed in [weights/MANIFEST.json](weights/MANIFEST.json), including visual checkpoints and LoRA adapters. It does not distribute the Qwen base model or patient MRI data. Team-owned original software uses the LMCCR Noncommercial Research Software License 1.0; team-owned documentation and listed checkpoints use CC BY-NC 4.0 to the extent the team can license them. See [LICENSE](LICENSE). 本仓库采用分项非商业许可，第三方内容保留其原有许可；本项目的授权不覆盖无权许可的第三方权利。
 
 Method papers, model references, and implementation attribution are in [README.md](README.md#references). Internal source provenance is recorded in [docs/PROVENANCE.md](docs/PROVENANCE.md). Upstream authors retain their rights, and upstream terms must be reviewed for the versions and assets actually used.
 

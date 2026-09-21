@@ -120,7 +120,9 @@ python -m pip install -e ".[dicom,generation]"
 
 提交改动前运行源码检查与 pytest，遵循 [贡献说明](CONTRIBUTING.md)。不要在提交、Issue 或日志中加入患者信息、令牌或私有模型资产。冻结检查点和历史快照只能从可信来源加载，参见 [安全说明](SECURITY.md)。
 
-本工程用于研究，尚未进行临床部署验证。**项目源码与项目权重的统一许可证尚未确定**；仓库公开可见不表示已授予开源使用或再分发许可。基础模型、依赖及其他第三方组件遵循各自条款，见 [许可状态](LICENSE_PENDING.md) 和 [第三方说明](THIRD_PARTY_LICENSES.md)。
+本工程用于研究，尚未进行临床部署验证。团队原创源码采用 [LMCCR 非商业科研软件许可 1.0](LICENSES/LMCCR-NC-Research-1.0.md)；团队有权授权的文档与清单所列权重采用 [CC BY-NC 4.0](LICENSES/WEIGHTS-AND-DOCUMENTATION.md)。商业使用须另行取得书面授权，第三方内容保留原有许可。参见 [LICENSE](LICENSE) 与 [第三方说明](THIRD_PARTY_LICENSES.md)。本项目属于源码公开的非商业研究工程，不宣称采用 OSI 认可的开源许可。
+
+**版权所有 © 2026 中南大学湘雅医院骨科王成功团队。** 授权联系：[wangchenggong@csu.edu.cn](mailto:wangchenggong@csu.edu.cn)。后续许可变更不撤销已依适用许可授予合规使用者的权利。
 
 <a id="english"></a>
 ## English
@@ -202,7 +204,9 @@ Historical documents record local integration stages. “Installed” does not m
 
 Follow [CONTRIBUTING.md](CONTRIBUTING.md), run the source checks and tests, and keep patient information and credentials out of commits and issues. Only load trusted checkpoints and executable source snapshots; see [SECURITY.md](SECURITY.md).
 
-This is a research integration release without clinical deployment validation. **A project-wide source and checkpoint license has not yet been selected.** Public availability does not itself grant an open-source or redistribution license. Upstream models and dependencies retain their own terms; see [LICENSE_PENDING.md](LICENSE_PENDING.md) and [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
+This research integration release has not undergone clinical deployment validation. Team-owned original software uses the [LMCCR Noncommercial Research Software License 1.0](LICENSES/LMCCR-NC-Research-1.0.md). Team-owned documentation and listed checkpoints, to the extent licensable by the team, use [CC BY-NC 4.0](LICENSES/WEIGHTS-AND-DOCUMENTATION.md). Commercial use requires separate written permission; third-party terms remain unchanged. See [LICENSE](LICENSE) and [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md). This is source-available noncommercial research software, not an OSI-approved open-source release.
+
+**Copyright © 2026 Wang Chenggong Team, Department of Orthopaedics, Xiangya Hospital, Central South University.** Licensing contact: [wangchenggong@csu.edu.cn](mailto:wangchenggong@csu.edu.cn). Later licensing changes do not revoke rights already granted to compliant recipients under the applicable license.
 
 <a id="documentation"></a>
 ## Documentation / 文档

@@ -1,0 +1,30 @@
+LMCCR licensing / LMCCR 许可说明
+
+Copyright (c) 2026 中南大学湘雅医院骨科王成功团队
+Wang Chenggong Team, Department of Orthopaedics,
+Xiangya Hospital, Central South University
+Contact / 授权联系: wangchenggong@csu.edu.cn
+
+This repository uses separate licenses, not a single blanket license:
+
+1. Team-owned original software, including source, scripts, tests, build files
+   and software configuration: LMCCR Noncommercial Research Software License
+   version 1.0, in LICENSES/LMCCR-NC-Research-1.0.md.
+2. Team-owned documentation and the selected checkpoint files listed in
+   weights/MANIFEST.json, to the extent the team has authority to license them:
+   Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
+   See LICENSES/WEIGHTS-AND-DOCUMENTATION.md and the unmodified legal terms at:
+   https://creativecommons.org/licenses/by-nc/4.0/legalcode.en
+3. Third-party material retains its original license and notices. These grants
+   do not relicense third-party components, base models, or underlying rights.
+   See THIRD_PARTY_LICENSES.md and applicable per-file/upstream notices.
+
+本仓库采用分项许可：团队原创软件采用非商业科研软件许可；团队有权授权的
+文档及清单所列权重采用 CC BY-NC 4.0；第三方内容继续适用原有许可证。
+商业使用须事先取得有权授权方的另行书面许可，联系上述邮箱。
+
+This is source-available research software with noncommercial restrictions;
+it is not represented as OSI-approved open-source software. The software
+license does not add restrictions to the separate CC BY-NC 4.0 grant.
+Later licensing changes do not retroactively remove rights already granted
+under an applicable license. Preserve the license accompanying your version.

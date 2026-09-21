@@ -1,7 +1,5 @@
-# License pending / 许可证待定
+# Superseded license status / 旧许可状态说明
 
-The repository owner has authorized public visibility. A project-wide license for the source and selected checkpoints has not yet been selected. Public visibility does not itself grant an open-source or redistribution license. No MIT, Apache-2.0, or other project license is asserted here.
+This historical filename is retained so existing links keep working. Licensing is no longer pending: see [LICENSE](LICENSE), the [software license](LICENSES/LMCCR-NC-Research-1.0.md) and the [weights/documentation license](LICENSES/WEIGHTS-AND-DOCUMENTATION.md).
 
-仓库所有者已授权公开仓库，但尚未选择覆盖项目源码及选定权重的统一许可证。公开可见不等同于授予开源使用或再分发许可。本项目没有宣称采用 MIT、Apache-2.0 或其他统一许可证。
-
-Upstream models and dependencies retain their own terms. See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) and the original sources before reuse. A citation is not a license grant.
+本文件仅为保留旧链接。现采用源码非商业科研许可及权重/文档 CC BY-NC 4.0 分项许可，第三方权利除外。授权联系：wangchenggong@csu.edu.cn。

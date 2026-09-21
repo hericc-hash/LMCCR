@@ -1,10 +1,10 @@
 cff-version: 1.2.0
-message: "This identifies the repository account, not paper authorship. Cite the repository and exact commit; formal paper metadata is pending."
+message: "Team attribution supplied by the repository owner. Cite the repository and exact commit; formal paper metadata is pending."
 title: "LMCCR: Lumbar MRI Clinical Planning, Report Generation, and Controlled Counterfactual Research"
 type: software
 version: 0.1.0
 authors:
-  - name: "hericc-hash"
-    website: "https://github.com/hericc-hash"
+  - name: "中南大学湘雅医院骨科王成功团队"
+    email: "wangchenggong@csu.edu.cn"
 repository-code: "https://github.com/hericc-hash/LMCCR"
 abstract: "Research integration of lumbar MRI clinical planning, report generation, and controlled counterfactual mechanisms. End-to-end validation remains incomplete."
