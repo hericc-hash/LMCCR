@@ -1,0 +1,141 @@
+{
+  "version": "LMCCR-Stage1.21-P3-TrainingFree-FiniteStepFunctionalConstrainedSearch-v1",
+  "paths": {
+    "feature_bank": "data/derived/p3/dev_feature_bank.pt",
+    "frozen_checkpoint": "weights/ccmrt/ccmrt.pt",
+    "frozen_config": "weights/ccmrt/stage1_20v21_default.yaml",
+    "frozen_model_py": "weights/ccmrt/code_snapshot/model.py",
+    "pair_bank": "data/derived/p3/pair_bank.pt",
+    "frozen_old_factual_evidence": "data/derived/p3/frozen_old_factual_evidence.pt",
+    "stageA_selection": "data/derived/p3/STAGE_A_SELECTION.json",
+    "protected_jacobian_cache": "data/derived/p3/protected_jacobian_cache.pt",
+    "prior_p1_1_selection": "data/derived/p3/P1_1_SELECTION.json",
+    "prior_p2_selection": "data/derived/p3/P2_SELECTION.json",
+    "output_root": "outputs/p3"
+  },
+  "frozen_sha256": {
+    "checkpoint": "f9cdcb099e7e19a8a9c32eca2118bf16d5d62fddfbc8f444a029120caa8de210",
+    "config": "dc8bb73efc60a62544a453188c1a1724d58c6673e82a70dd3a0cd1bef3a62340"
+  },
+  "model": {
+    "x_dim": 256,
+    "c_dim": 47,
+    "task_dim": 128,
+    "a_dim": 96,
+    "r_dim": 48,
+    "task_embedding_dim": 24,
+    "ar_hidden": 256,
+    "hidden": 256,
+    "dropout": 0.1,
+    "transport_hidden": 96,
+    "transport_rank": 6,
+    "transport_mode": "reversible_cayley",
+    "use_coordinate_conditioning": true,
+    "identity_tau": 2.0,
+    "transport_rotation_scale": 0.12,
+    "transport_strength_scale": 0.15
+  },
+  "data": {
+    "development_split_name": "train",
+    "internal_split_name": "internal",
+    "expected_development": 388,
+    "expected_internal": 100,
+    "expected_train_rows": 9288,
+    "expected_internal_rows": 1179,
+    "expected_stageA_profile": "empirical",
+    "expected_stageA_seeds": [
+      20260906,
+      20260907,
+      20260908
+    ]
+  },
+  "specificity_anchor": {
+    "method": "P1.1 ordinary damped protected projection",
+    "alpha": 0.3,
+    "expected_prior_action": "P1_1_NO_GO_CONSIDER_TARGET_PRESERVING_PROJECTION",
+    "expected_prior_best_alpha": 0.3
+  },
+  "functional_search": {
+    "selection_beta": 0.25,
+    "lambda_grid": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "direction_path": "d(lambda)=normalize((1-lambda)*d_spec + lambda*d_stageA)",
+    "global_search_first": true,
+    "adaptive_rho_grid": [
+      0.95,
+      0.9
+    ],
+    "adaptive_constraint": "if StageA_MDS>0: candidate_MDS >= rho*StageA_MDS; else candidate_MDS >= 0",
+    "adaptive_objective": "minimum finite-step protected drift among feasible candidates",
+    "adaptive_fallback": "StageA (lambda=1) if no path candidate is feasible",
+    "tie_tolerance": 1e-12,
+    "eps": 1e-08
+  },
+  "evaluation": {
+    "betas": [
+      0.1,
+      0.25,
+      0.5
+    ],
+    "manifold_beta": 0.5,
+    "strong_go": {
+      "cos_min": 0.58,
+      "mds_min": 0.032,
+      "mdc_min": 0.87,
+      "drift_max": 0.016
+    },
+    "go": {
+      "cos_min": 0.56,
+      "mds_min": 0.03,
+      "mdc_min": 0.85,
+      "drift_max": 0.0175
+    },
+    "task_repair_required": [
+      "stenosis",
+      "nerve"
+    ],
+    "prior_p2_required_action": "P2_NO_GO_REASSESS_NONLINEAR_FUNCTIONAL_PARAMETERIZATION",
+    "prior_p2_expected_best_alpha": 1.0
+  },
+  "selection_policy": {
+    "primary_rule": "highest GO tier first; within same tier prefer global over adaptive; score only tie-breaks",
+    "freeze_global_if_go": true,
+    "freeze_adaptive_if_go_and_no_equal_or_better_global": true,
+    "if_all_fail": "P3_NO_GO_STOP_STAGE1_21_OR_REDESIGN_OPERATOR"
+  },
+  "firewall": {
+    "parameter_updates": false,
+    "optimizer": false,
+    "backward": false,
+    "autograd": false,
+    "model_train_mode": false,
+    "all_model_parameters_requires_grad": false,
+    "independent49_access": false,
+    "planner_access": false,
+    "realizer_access": false,
+    "A2_checkpoint_access": false,
+    "target_gradient_cache_access": false,
+    "stageB_or_C": false
+  }
+}

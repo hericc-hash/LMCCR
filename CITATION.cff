@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated paper."
+title: "LMCCR"
+type: software
+version: 0.1.0
+date-released: 2026-08-30
+authors:
+  - family-names: "To be completed"
+repository-code: "https://github.com/hericc-hash/LMCCR"
+abstract: "Paper-facing implementation of anatomy-preserving counterfactual lumbar MRI report generation."

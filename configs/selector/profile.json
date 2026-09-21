@@ -1,0 +1,6 @@
+{
+  "rule": "factual_safe_text_listwise",
+  "alpha_fact": 0.6,
+  "fact_margin": 0.32,
+  "text_model_weight": 0.75
+}

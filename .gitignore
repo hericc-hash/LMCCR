@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Private data, generated tensors, checkpoints, and experimental results
+data/raw/*
+data/derived/*
+outputs/*
+weights/**/*
+
+# Keep only repository instructions and empty-directory markers
+!data/raw/.gitkeep
+!data/derived/.gitkeep
+!data/README.md
+!outputs/.gitkeep
+!outputs/README.md
+!weights/**/
+!weights/**/.gitkeep
+!weights/README.md
+# Imported adapter model cards are local assets, too.
+
+# Local overrides and logs
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+run/
+configs/local*.json
+configs/local*.yaml
+*.log
+*.xlsx
+*.csv
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.npz
+*.npy
+*.dcm
+*.dicom
+*.nii
+*.nii.gz
+*.egg-info/
+build/
+dist/
+
+# Explicitly approved publication assets; all other weights remain private.
+!weights/coordinate_prior/hr320_v7.pt
+!weights/visual_evidence/lumbar_visual_evidence.pt
+!weights/apreb/apreb.pt
+!weights/ccmrt/ccmrt.pt
+!weights/clinical_planner/05_stage2_3B_selected_candidate.pt
+!weights/report_realizer/language_adapter/adapter_model.safetensors
+!weights/report_realizer/dual_channel_adapter/adapter_model.safetensors
+!weights/report_realizer/scaffold_adapter/adapter_model.safetensors
+!weights/selector/fact_seed20260931.pt
+!weights/selector/text_listwise_seed20260931.pt
+!weights/selector/fact_seed20260932.pt
+!weights/selector/fact_seed20260933.pt
+!weights/selector/text_listwise_seed20260932.pt
+!weights/selector/text_listwise_seed20260933.pt
+!weights/visual_experts/disc/best_common.pt
+!weights/visual_experts/stenosis/best_fused_common.pt
+!weights/visual_experts/nerve/best_fused_common.pt
+!weights/direct_auxiliary_planner/best_stage1_18c_explicit_clinical_mediator.pt
+!weights/direct/epoch_2/direct_prefix.pt
+!weights/direct/epoch_2/lora/adapter_model.safetensors
+!weights/runtime_assets/coordinate_normalizer.pt
+!weights/runtime_assets/lordosis_geometry_constants.pt
+!weights/report_realizer/language_adapter/adapter_config.json
+!weights/report_realizer/dual_channel_adapter/adapter_config.json
+!weights/report_realizer/scaffold_adapter/adapter_config.json
+!weights/direct/epoch_2/lora/adapter_config.json
+!weights/MANIFEST.json

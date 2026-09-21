@@ -1,0 +1,12 @@
+from __future__ import annotations
+import json,os,sys
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'src'))
+from lumbar_cf_report.selection.io import load_json,dump_json
+
+def main():
+    c=load_json(Path(os.environ.get('LMCCR_SELECTOR_CONFIG', str(ROOT/'configs/selector/default.json'))));o=Path(os.environ['OUT']);sel=load_json(o/'07_selection_gate/SELECTION_GATE.json');hold=load_json(o/'09_holdout/HOLDOUT_AND_COMBINED_GATE.json') if (o/'09_holdout/HOLDOUT_AND_COMBINED_GATE.json').exists() else None;train=load_json(o/'04_reranker/TRAINING_COMPLETE.json');oracle=load_json(o/'06_selection_oracle_audit/SELECTION50_S4_ORACLE_CEILING.json') if (o/'06_selection_oracle_audit/SELECTION50_S4_ORACLE_CEILING.json').exists() else None;imp=load_json(o/'01_import/IMPORT_REPORT.json');emb=load_json(o/'02_text_embeddings/EMBEDDING_COMPLETE.json')
+    verdict='R32_S4_V22_SELECTION_FAIL' if not sel['pass'] else ('R32_S4_V22_INTERNAL100_TARGET_PASS' if hold and hold['pass'] else ('R32_S4_V22_HOLDOUT_OR_COMBINED_FAIL' if hold else 'R32_S4_V22_SELECTION_PASS_HOLDOUT_NOT_RUN'))
+    rep={'status':'PASS','version':c['version'],'verdict':verdict,'selection50':sel,'selection50_oracle_ceiling':oracle,'holdout_and_combined':hold,'source_s4_reuse':imp,'text_embedding':emb,'reranker_training':{'primary_profile':train.get('primary_profile'),'secondary_profile_f1_072':train.get('secondary_profile_f1_072'),'candidate_rows':train.get('candidate_rows'),'oof_text_listwise_diagnostics':train.get('oof_text_listwise_diagnostics')},'target':'Clinical F1>=0.70, ROUGE-L>=0.55, BLEU-4>=0.45.','scientific_contract':'Frozen v3.2 generator and frozen S4 candidate texts. Frozen v3.2-Qwen is used only as a deployment-safe text encoder; v2.2 trains FactNet + case-level listwise preference head on Development388. Internal50-selection gate precedes holdout. Independent49 untouched.'}
+    dump_json(rep,o/'10_FINAL_R32_S4_V22_DECISION.json');(o/'10_FINAL_R32_S4_V22_DECISION.md').write_text(f"# R3.2-S4-v2.2 Final Decision\n\n- Verdict: **{verdict}**\n- Selection50: `{sel.get('metrics')}`\n- OOF listwise diagnostics: `{train.get('oof_text_listwise_diagnostics')}`\n- Selection S4 oracle joint feasible: `{oracle.get('joint_gate_exact_milp',{}).get('feasible') if oracle else None}`\n- Holdout/Combined Internal100: `{hold.get('combined_internal100') if hold else None}`\n\nIndependent49 remains untouched.\n",encoding='utf-8');print(json.dumps(rep,ensure_ascii=False,indent=2))
+if __name__=='__main__':main()

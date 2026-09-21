@@ -1,0 +1,302 @@
+{
+  "version": "LMCCR-Stage3C-R3.2-S4-v2.2-Text-Level-Listwise-Preference-Reranker",
+  "project_root": "/root/autodl-tmp/src",
+  "device": "cuda",
+  "seed": 20260908,
+  "independent49_policy": "FORBIDDEN",
+  "assets": {
+    "base_model": "/autodl-fs/data/Qwen3-4B-Instruct-2507",
+    "r23_frozen_config": "/root/autodl-tmp/src/outputs/lmccr_dualpath_r2_3_planner_anchored_factual_preference_v1/code_snapshot/configs/r2_3_config.json",
+    "r23_prepared_sft": "/root/autodl-tmp/src/outputs/lmccr_dualpath_r2_3_planner_anchored_factual_preference_v1/01_prepare/sft_train388_plus_identity.jsonl",
+    "frozen_v5_jsonl": "/root/autodl-tmp/src/outputs/qwen3_final_repair_v5/04_full100/generations.jsonl"
+  },
+  "stage23": {
+    "output_prefixes": [
+      "/root/autodl-tmp/src/outputs/stage2_3B_cf_supervision_v1_7_*"
+    ],
+    "required_files": [
+      "05_stage2_3B_selected_candidate.pt",
+      "01_stage23b_data.pt",
+      "config_used.json",
+      "07_internal_factual_probs.pt"
+    ],
+    "lordosis_threshold": 0.5
+  },
+  "stage3a": {
+    "output_prefixes": [
+      "/root/autodl-tmp/src/outputs/stage3A_stage23v17_frozen_r23e2_exact_runtime_plugin_v1_3_*",
+      "/root/autodl-tmp/src/outputs/stage3A_stage23v17_frozen_r23e2_exact_runtime_plugin_v1_2_*"
+    ],
+    "required_files": [
+      "02_inputs/internal100_r23_inputs.jsonl"
+    ],
+    "inputs_file": "02_inputs/internal100_r23_inputs.jsonl"
+  },
+  "v32": {
+    "output_prefixes": [
+      "/root/autodl-tmp/src/outputs/stage3C_r31_core_redacted_scaffold_precision_patch_v3_2_*"
+    ],
+    "required_files": [
+      "02_training/TRAINING_COMPLETE.json",
+      "01_data/CANONICAL_LEXICALIZER.json",
+      "03_internal50_selection/predictions.jsonl"
+    ]
+  },
+  "parser": {
+    "module": "scripts.baselines.factual_generation_v1.common.report_metrics",
+    "expected_sha256": "0958960cdb261fe3b1e55f4d5e012b6e1df2e100e54d4a161c3fd83201df38a0"
+  },
+  "scaffold_channel": {
+    "source": "direct_draft",
+    "placeholder": "<CORE>",
+    "maximum_chars": 1000,
+    "require_parser_zero": true,
+    "maximum_parser_positive_rate": 0.0,
+    "parser_guided_min_span_chars": 2,
+    "parser_guided_max_span_chars": 36
+  },
+  "generation": {
+    "max_new_tokens": 448,
+    "repetition_penalty": 1.05,
+    "sample_count": 4,
+    "temperature": 0.75,
+    "top_p": 0.92,
+    "top_k": 40
+  },
+  "precision_patch": {
+    "maximum_iterations": 16,
+    "generic_min_span_chars": 2,
+    "generic_max_span_chars": 34,
+    "target_context_chars": 24,
+    "protect_present_wanted_slots_first": true,
+    "missing_positive_try_conclusion_first": true,
+    "canonical_fallback_forbidden": true
+  },
+  "legacy_reuse": {
+    "enabled": true,
+    "candidate_pool_globs": [
+      "/root/autodl-tmp/src/outputs/stage3C_r30_p_anchored_fact_preserving_realizer_v1_20260907_225240/02_development_candidates/DEV388_CANDIDATE_POOL.jsonl",
+      "/root/autodl-tmp/src/outputs/stage3C_r32_fact_aware_candidate_reranking_realizer_v1_*/02_development_candidates/DEV388_CANDIDATE_POOL.jsonl",
+      "/root/autodl-tmp/src/outputs/stage3C_r32_lite_preflight_*/03_development_candidates/DEV388_ADAPTIVE_CANDIDATE_POOL.jsonl",
+      "/root/autodl-tmp/src/outputs/stage3C_r32_lite_adaptive_candidate_expansion_realizer_v1_*/03_development_candidates/DEV388_ADAPTIVE_CANDIDATE_POOL.jsonl"
+    ],
+    "allowed_tags": [
+      "greedy",
+      "greedy_final",
+      "sample0",
+      "sample1",
+      "sample2",
+      "sample3"
+    ],
+    "require_core_exact": true,
+    "planner_prob_tolerance": 1e-06
+  },
+  "selection_cache_reuse": {
+    "enabled": true,
+    "candidate_pool_globs": [
+      "/root/autodl-tmp/src/outputs/stage3C_r32_lite_preflight_*/12_selection50_expanded_diagnostic/SELECTION50_POOL_S4.jsonl",
+      "/root/autodl-tmp/src/outputs/stage3C_r32_lite_adaptive_candidate_expansion_realizer_v1_*/12_selection50_expanded_diagnostic/SELECTION50_POOL_S4.jsonl"
+    ],
+    "planner_prob_tolerance": 1e-06
+  },
+  "candidate_protocol": {
+    "tags": [
+      "greedy",
+      "greedy_final",
+      "sample0",
+      "sample1",
+      "sample2",
+      "sample3"
+    ],
+    "development_cases": 388,
+    "development_candidate_pool_resume": true,
+    "selection_reuse_v32_greedy_and_final": true,
+    "full_stochastic_coverage": true,
+    "stochastic_samples_per_case": 4,
+    "no_reference_in_candidate_generation": true,
+    "no_gt_in_candidate_generation": true,
+    "beam_search": false,
+    "teacher_forced_logprob": false
+  },
+  "reranker": {
+    "cv_folds": 5,
+    "final_seeds": [
+      20260931,
+      20260932,
+      20260933
+    ],
+    "epochs_fact": 280,
+    "lr_fact": 0.0018,
+    "device": "cuda",
+    "primary_profile_target_f1": 0.7,
+    "secondary_profile_target_f1": 0.72,
+    "language_balance_rouge_weight": 0.45,
+    "language_balance_bleu_weight": 0.55,
+    "profile_rule": "factual-safe-set then frozen-Qwen text-level listwise preference",
+    "selection_objective": "Use Development388 OOF to select a factual-safe margin under the Clinical F1 floor; within that safe set rank candidates using frozen-Qwen contextual text embeddings trained with case-level listwise language supervision.",
+    "profile_grid": {
+      "alpha_fact": [
+        0.45,
+        0.6,
+        0.75,
+        0.9,
+        1.0
+      ],
+      "fact_margin": [
+        0.0,
+        0.01,
+        0.02,
+        0.03,
+        0.045,
+        0.06,
+        0.08,
+        0.1,
+        0.14,
+        0.18,
+        0.24,
+        0.32
+      ],
+      "text_model_weight": [
+        0.75,
+        0.9,
+        1.0
+      ]
+    },
+    "firewall": {
+      "features_may_use": [
+        "planner_binary",
+        "planner_probabilities",
+        "planner_confidence",
+        "candidate_parser_vector",
+        "direct_parser_vector",
+        "core_redacted_scaffold_overlap",
+        "candidate_to_direct_overlap",
+        "case_relative_candidate_features",
+        "candidate_length_and_repetition",
+        "generation_tag",
+        "frozen_qwen_contextual_candidate_embedding"
+      ],
+      "features_forbidden": [
+        "reference",
+        "slot_labels",
+        "GT",
+        "ROUGE",
+        "BLEU",
+        "candidate_model_logprob",
+        "reference_embedding"
+      ]
+    },
+    "epochs_text_listwise": 220,
+    "lr_text_listwise": 0.0008,
+    "listwise_batch_cases": 32,
+    "listwise_train_fact_margin": 0.1,
+    "listwise_target_temperature": 0.035,
+    "listwise_pred_temperature": 1.0
+  },
+  "selection_gate": {
+    "minimum_clinical_f1": 0.7,
+    "minimum_rouge_l": 0.55,
+    "minimum_bleu4": 0.45,
+    "minimum_parse_rate": 0.98
+  },
+  "holdout_gate": {
+    "minimum_holdout_clinical_f1": 0.68,
+    "minimum_holdout_rouge_l": 0.53,
+    "minimum_holdout_bleu4": 0.43,
+    "minimum_combined100_clinical_f1": 0.7,
+    "minimum_combined100_rouge_l": 0.55,
+    "minimum_combined100_bleu4": 0.45,
+    "minimum_parse_rate": 0.98
+  },
+  "comparators": {
+    "v32_raw_selection50": {
+      "clinical_f1": 0.6685796269727403,
+      "rouge_l": 0.523144877576651,
+      "bleu4": 0.4084677608666621
+    },
+    "v32_final_selection50": {
+      "clinical_f1": 0.6910112359550562,
+      "rouge_l": 0.5153924276222265,
+      "bleu4": 0.39908256770726586
+    },
+    "r32_lite_v1_selection50": {
+      "clinical_f1": 0.733652312599681,
+      "rouge_l": 0.5202639301476565,
+      "bleu4": 0.40348360095184654
+    },
+    "selection50_s4_oracle_balanced_f1_070": {
+      "clinical_f1": 0.7055214723926381,
+      "rouge_l": 0.5751581849330104,
+      "bleu4": 0.47947127379893234
+    },
+    "selection50_s4_oracle_balanced_f1_072": {
+      "clinical_f1": 0.7216174183514774,
+      "rouge_l": 0.5729135058628038,
+      "bleu4": 0.4797818481845361
+    },
+    "r32_s4_v2_selection50": {
+      "clinical_f1": 0.7232704402515723,
+      "rouge_l": 0.5317678714777512,
+      "bleu4": 0.43793455663746983
+    }
+  },
+  "adaptive_expansion": {
+    "enabled": false,
+    "development_target_expand_fraction": 1.0,
+    "minimum_development_expand_cases": 388,
+    "maximum_development_expand_fraction": 1.0,
+    "always_easy_if_exact_core_and_healthy": false,
+    "hard_stenosis_nerve_confidence": 0.5,
+    "high_confidence": 0.5,
+    "low_confidence": 0.25,
+    "text_min_chars": 40,
+    "text_max_chars": 900,
+    "repeat_unique_bigram_min": 0.58,
+    "score_weights": {
+      "best_core_mismatch": 0.7,
+      "best_high_conf_mismatch": 1.05,
+      "best_stenosis_nerve_high_conf_mismatch": 1.8,
+      "raw_final_parser_disagreement": 0.65,
+      "planner_direct_high_conf_disagreement": 0.45,
+      "both_candidates_unresolved": 0.8,
+      "text_pathology": 0.75,
+      "disc_lordosis_low_conf_only_discount": -0.35,
+      "best_mismatch_conf_sum": 0.55,
+      "best_stenosis_nerve_mismatch_conf_sum": 1.1
+    }
+  },
+  "source_s4": {
+    "output_prefixes": [
+      "/root/autodl-tmp/src/outputs/stage3C_r32_s4_language_aware_reranker_v2_1_*",
+      "/root/autodl-tmp/src/outputs/stage3C_r32_s4_expanded_candidate_reranking_realizer_v2_*"
+    ],
+    "required_files": [
+      "03_development_candidates/DEV388_S4_CANDIDATE_POOL.jsonl",
+      "03_development_candidates/DEV_POOL_SUMMARY.json",
+      "05_selection_pool/SELECTION50_S4_DEPLOYABLE_POOL.jsonl",
+      "05_selection_pool/SELECTION50_EVAL_LABELS.jsonl",
+      "01_development/CANONICAL_LEXICALIZER.json",
+      "05_selection_pool/POOL_SUMMARY.json"
+    ],
+    "env_override": "R32S4V22_SOURCE_OUT",
+    "reuse_mode": "validated-copy-no-generation-for-development-or-selection; text embeddings are freshly extracted once and cached"
+  },
+  "text_encoder": {
+    "model": "frozen_v32_qwen_hidden_state",
+    "pooling": "0.70_candidate_mean_plus_0.30_candidate_last",
+    "prefix_max_tokens": 448,
+    "candidate_max_tokens": 448,
+    "batch_size": 2,
+    "cache_dtype": "float16",
+    "l2_normalize": true,
+    "use_reference": false,
+    "use_gt": false,
+    "use_generation": false,
+    "deployment_fields": [
+      "planner_core_and_probabilities",
+      "direct_draft",
+      "linguistic_scaffold",
+      "candidate_text"
+    ]
+  }
+}

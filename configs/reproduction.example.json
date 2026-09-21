@@ -1,0 +1,26 @@
+{
+  "dataset_root": "data/raw/LumbarMRI_CF_Report_Deidentified_Dataset_v1",
+  "base_model": "weights/third_party/Qwen3_4B_Instruct_2507",
+  "weights_root": "weights",
+  "installation_receipt": "weights/_packages/LMCCR_OPEN_SOURCE_WEIGHTS_20260920/INSTALLATION.json",
+  "planner_runtime": "weights/clinical_planner",
+  "language_adapter": "weights/report_realizer/language_adapter",
+  "dual_channel_adapter": "weights/report_realizer/dual_channel_adapter",
+  "scaffold_adapter": "weights/report_realizer/scaffold_adapter",
+  "selector_profile": "weights/selector/SELECTED_PROFILE.json",
+  "fact_models": [
+    "weights/selector/fact_seed20260931.pt",
+    "weights/selector/fact_seed20260932.pt",
+    "weights/selector/fact_seed20260933.pt"
+  ],
+  "text_models": [
+    "weights/selector/text_listwise_seed20260931.pt",
+    "weights/selector/text_listwise_seed20260932.pt",
+    "weights/selector/text_listwise_seed20260933.pt"
+  ],
+  "output_root": "outputs/weight_validation",
+  "lordosis_geometry_constants": "weights/runtime_assets/lordosis_geometry_constants.pt",
+  "coordinate_normalizer": "weights/runtime_assets/coordinate_normalizer.pt",
+  "direct_checkpoint": "weights/direct/epoch_2",
+  "heritage_installation_receipt": "weights/_packages/LMCCR_RUNTIME_HERITAGE_PATCH_20260920/INSTALLATION.json"
+}

@@ -1,0 +1,60 @@
+stage: CCMRT
+name: Coordinate-Conditioned Matched Residual Transport
+seed: 20260824
+
+paths:
+  feature_bank_dev: data/derived/development_feature_bank.pt
+  feature_bank_independent: data/derived/independent49_feature_bank.pt
+  ar_init_checkpoint: weights/apreb/apreb.pt
+  output_root: outputs/checkpoints/ccmrt
+
+splits:
+  train: [train]
+  donor: [train]
+  internal: [internal]
+  independent: [independent]
+
+model:
+  anatomy_dim: 96
+  residual_dim: 48
+  task_embedding_dim: 24
+  coordinate_latent_dim: 48
+  ar_hidden: 256
+  hidden: 256
+  dropout: 0.10
+  transport_hidden: 96
+  transport_rank: 6
+  transport_mode: reversible_cayley
+  use_coordinate_conditioning: true
+  identity_tau: 2.0
+  transport_rotation_scale: 0.12
+  transport_strength_scale: 0.15
+
+training:
+  device: cuda
+  num_workers: 0
+  init_mode: pretrained
+  factual_batch_size: 32
+  pair_batch_size: 96
+  factual_epochs: 12
+  joint_epochs: 36
+  factual_ar_lr: 0.00005
+  factual_guard_lr: 0.00050
+  joint_residual_lr: 0.00015
+  joint_anatomy_lr: 0.00002
+  transport_lr: 0.00040
+  weight_decay: 0.0001
+  grad_clip: 5.0
+  target_margin: 0.03
+  effect_floor_ratio: 0.95
+  monotonic_margin: 0.0
+  alphas: [0.25, 0.50, 0.75, 1.00]
+  overwrite_log: true
+
+loss:
+  factual: {task_bce: 1.0, residual_bce: 0.75, e_rec: 1.25, e_cos: 0.50, x_rec: 1.00, x_cos: 1.25, segment_rec: 0.35, coordinate_rec: 0.20, probe_a: 0.15, probe_c: 0.15, legacy_a: 0.00, legacy_r: 0.00, residual_norm: 0.0001}
+  joint_factual_anchor: {task_bce: 1.0, residual_bce: 0.75, e_rec: 1.25, e_cos: 0.50, x_rec: 0.75, x_cos: 1.00, segment_rec: 0.25, coordinate_rec: 0.15}
+  intervention: {target_hinge: 1.0, effect_floor: 2.0, donor_bce: 0.15, endpoint_bce: 0.40, anatomy: 1.75, coordinate: 0.35, off_target: 1.10, transport_adjustment: 0.01, identity: 0.02, cycle: 0.10, monotonic: 1.0, factual_anchor: 1.50}
+
+donor_matching: {quality_weight: 0.25, topk: 8, train_pairs_per_slot: 1}
+evaluation: {alphas: [0.0, 0.25, 0.50, 0.75, 1.00], effect_matched_points: 5, bootstrap: 5000}

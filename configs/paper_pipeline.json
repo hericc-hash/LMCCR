@@ -1,0 +1,35 @@
+{
+  "version": "lumbar-cf-report-final-freeze-v1",
+  "status": "INCOMPLETE_SOURCE_NOT_RELEASE_READY",
+  "workflow": {
+    "factual_evidence": "Raw-E",
+    "planner": "Stage2.3-B-v1.7",
+    "clinical_core": "Clinical16",
+    "draft": "frozen Direct-to-Qwen auxiliary draft",
+    "realizer": "R3.1-v3.2",
+    "selector": "R3.2-S4-v2.2",
+    "parser": "lumbar_cf_report.evaluation.report_metrics",
+    "p3_role": "mechanism_and_bounded_cf_supervision_only"
+  },
+  "paths": {
+    "planner_runtime": "weights/clinical_planner",
+    "base_model": "weights/third_party/Qwen3_4B_Instruct_2507",
+    "language_adapter": "weights/report_realizer/language_adapter",
+    "dual_channel_adapter": "weights/report_realizer/dual_channel_adapter",
+    "scaffold_adapter": "weights/report_realizer/scaffold_adapter",
+    "selector": "weights/selector",
+    "output_root": "outputs"
+  },
+  "protocol": {
+    "training_cohort": "Development388",
+    "profile_selection": "Development388 OOF",
+    "gate_cohort": "Internal50-selection",
+    "holdout_cohort": "Internal50-holdout after gate PASS",
+    "independent49_train_select": false
+  },
+  "missing_source": [
+    "exact planner/realizer run configurations",
+    "original Direct draft generation source/assets"
+  ],
+  "note": "Workflow manifest only, not a replacement for the missing frozen training/generation configs."
+}

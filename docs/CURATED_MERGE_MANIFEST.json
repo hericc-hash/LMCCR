@@ -1,0 +1,632 @@
+{
+  "bundle": "LMCCR_GITHUB_CURATED_FINAL_FREEZE_v1_20260919",
+  "bundle_zip_sha256": "bedee3fbd221c04a0bce0925096d1b453209426e1268938a47b6ef5daa5fdd7a",
+  "status": "CORE_INTEGRATED_SELECTOR_DEFERRED_BY_OWNER",
+  "missing_selector_imports": [
+    {
+      "missing_module": "r32s4v22.adaptive",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/07_prepare_internal50_holdout_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22.candidates",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/07_prepare_internal50_holdout_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22.discovery",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/00_preflight.py"
+    },
+    {
+      "missing_module": "r32s4v22.eval_bridge",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/00_preflight.py"
+    },
+    {
+      "missing_module": "r32s4v22.eval_bridge",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/05_gate_internal50_selection.py"
+    },
+    {
+      "missing_module": "r32s4v22.eval_bridge",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/06_audit_selection50_s4_oracle.py"
+    },
+    {
+      "missing_module": "r32s4v22.eval_bridge",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/07_prepare_internal50_holdout_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22.eval_bridge",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/09_rerank_and_evaluate_holdout.py"
+    },
+    {
+      "missing_module": "r32s4v22.features",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/03_train_text_listwise_reranker.py"
+    },
+    {
+      "missing_module": "r32s4v22.features",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/04_rerank_internal50_selection.py"
+    },
+    {
+      "missing_module": "r32s4v22.features",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/09_rerank_and_evaluate_holdout.py"
+    },
+    {
+      "missing_module": "r32s4v22.features",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/tests/selftest.py"
+    },
+    {
+      "missing_module": "r32s4v22.internal",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/07_prepare_internal50_holdout_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/00_preflight.py"
+    },
+    {
+      "missing_module": "r32s4v22.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/01_import_frozen_s4_pools.py"
+    },
+    {
+      "missing_module": "r32s4v22.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/02_extract_text_embeddings.py"
+    },
+    {
+      "missing_module": "r32s4v22.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/03_train_text_listwise_reranker.py"
+    },
+    {
+      "missing_module": "r32s4v22.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/04_rerank_internal50_selection.py"
+    },
+    {
+      "missing_module": "r32s4v22.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/05_gate_internal50_selection.py"
+    },
+    {
+      "missing_module": "r32s4v22.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/07_prepare_internal50_holdout_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/08_extract_holdout_text_embeddings.py"
+    },
+    {
+      "missing_module": "r32s4v22.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/09_rerank_and_evaluate_holdout.py"
+    },
+    {
+      "missing_module": "r32s4v22.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/10_final_summary.py"
+    },
+    {
+      "missing_module": "r32s4v22.metrics",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/05_gate_internal50_selection.py"
+    },
+    {
+      "missing_module": "r32s4v22.metrics",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/06_audit_selection50_s4_oracle.py"
+    },
+    {
+      "missing_module": "r32s4v22.metrics",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/09_rerank_and_evaluate_holdout.py"
+    },
+    {
+      "missing_module": "r32s4v22.modeling",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/02_extract_text_embeddings.py"
+    },
+    {
+      "missing_module": "r32s4v22.modeling",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/07_prepare_internal50_holdout_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22.modeling",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/08_extract_holdout_text_embeddings.py"
+    },
+    {
+      "missing_module": "r32s4v22.planner",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/tests/selftest.py"
+    },
+    {
+      "missing_module": "r32s4v22.pool",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/07_prepare_internal50_holdout_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22.reranker",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/03_train_text_listwise_reranker.py"
+    },
+    {
+      "missing_module": "r32s4v22.reranker",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/04_rerank_internal50_selection.py"
+    },
+    {
+      "missing_module": "r32s4v22.reranker",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/09_rerank_and_evaluate_holdout.py"
+    },
+    {
+      "missing_module": "r32s4v22.reranker",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/tests/selftest.py"
+    },
+    {
+      "missing_module": "r32s4v22.stage23_exact",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/00_preflight.py"
+    },
+    {
+      "missing_module": "r32s4v22.stage23_exact",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/07_prepare_internal50_holdout_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22.text_embedder",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/02_extract_text_embeddings.py"
+    },
+    {
+      "missing_module": "r32s4v22.text_embedder",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/03_train_text_listwise_reranker.py"
+    },
+    {
+      "missing_module": "r32s4v22.text_embedder",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/04_rerank_internal50_selection.py"
+    },
+    {
+      "missing_module": "r32s4v22.text_embedder",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/08_extract_holdout_text_embeddings.py"
+    },
+    {
+      "missing_module": "r32s4v22.text_embedder",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/scripts/09_rerank_and_evaluate_holdout.py"
+    },
+    {
+      "missing_module": "r32s4v22.text_embedder",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_selector/tests/selftest.py"
+    },
+    {
+      "missing_module": "r32s4v22final.adaptive",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/01_prepare_holdout50_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22final.candidates",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/01_prepare_holdout50_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22final.eval_bridge",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/00_preflight_frozen_v22.py"
+    },
+    {
+      "missing_module": "r32s4v22final.eval_bridge",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/01_prepare_holdout50_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22final.eval_bridge",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/03_rerank_evaluate_internal100.py"
+    },
+    {
+      "missing_module": "r32s4v22final.features",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/03_rerank_evaluate_internal100.py"
+    },
+    {
+      "missing_module": "r32s4v22final.features",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/tests/selftest.py"
+    },
+    {
+      "missing_module": "r32s4v22final.internal",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/01_prepare_holdout50_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22final.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/00_preflight_frozen_v22.py"
+    },
+    {
+      "missing_module": "r32s4v22final.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/01_prepare_holdout50_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22final.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/02_extract_holdout_text_embeddings.py"
+    },
+    {
+      "missing_module": "r32s4v22final.io",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/03_rerank_evaluate_internal100.py"
+    },
+    {
+      "missing_module": "r32s4v22final.metrics",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/00_preflight_frozen_v22.py"
+    },
+    {
+      "missing_module": "r32s4v22final.metrics",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/03_rerank_evaluate_internal100.py"
+    },
+    {
+      "missing_module": "r32s4v22final.modeling",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/01_prepare_holdout50_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22final.modeling",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/02_extract_holdout_text_embeddings.py"
+    },
+    {
+      "missing_module": "r32s4v22final.pool",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/01_prepare_holdout50_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22final.reranker",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/03_rerank_evaluate_internal100.py"
+    },
+    {
+      "missing_module": "r32s4v22final.reranker",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/tests/selftest.py"
+    },
+    {
+      "missing_module": "r32s4v22final.stage23_exact",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/01_prepare_holdout50_s4_pool.py"
+    },
+    {
+      "missing_module": "r32s4v22final.text_embedder",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/02_extract_holdout_text_embeddings.py"
+    },
+    {
+      "missing_module": "r32s4v22final.text_embedder",
+      "referenced_by": "01_final_workflow/selector_v2_2/final_internal100_eval/scripts/03_rerank_evaluate_internal100.py"
+    }
+  ],
+  "missing_configs": [
+    "Stage2.3-v1.7 configs/default.json",
+    "R3.1-v3.2 configs/default.json",
+    "R3.2-S4-v2.2 configs/default.json"
+  ],
+  "files": [
+    {
+      "source": "01_final_workflow/p3_final/stage121p3/__init__.py",
+      "destination": "src/lumbar_cf_report/p3/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "integrated_sha256": "2fb378e7915fcb006cc820cd84c8fab765c477950d8744457f74b9d3c69163a1",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/p3_final/stage121p3/backend.py",
+      "destination": "src/lumbar_cf_report/p3/backend.py",
+      "source_sha256": "6109fd0a3285a348ad9cfde9c9731a12e8703c0a76b524a3b0cf7cb1f31ce092",
+      "integrated_sha256": "6109fd0a3285a348ad9cfde9c9731a12e8703c0a76b524a3b0cf7cb1f31ce092",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/p3_final/stage121p3/common.py",
+      "destination": "src/lumbar_cf_report/p3/common.py",
+      "source_sha256": "1324181fc30674c2554078949e6325ac49442a45b1435233ed3a0e91151b7e7e",
+      "integrated_sha256": "1324181fc30674c2554078949e6325ac49442a45b1435233ed3a0e91151b7e7e",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/p3_final/stage121p3/evaluator.py",
+      "destination": "src/lumbar_cf_report/p3/evaluator.py",
+      "source_sha256": "6fdd673069ca8842b51eeeaa8efbf44ae690246ef3eec9046962dd9e916f4bfd",
+      "integrated_sha256": "6fdd673069ca8842b51eeeaa8efbf44ae690246ef3eec9046962dd9e916f4bfd",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/p3_final/stage121p3/ops.py",
+      "destination": "src/lumbar_cf_report/p3/ops.py",
+      "source_sha256": "4a8827cad54611e5e68f9131510c05e28b9eced137c82d16d75c5db05a725834",
+      "integrated_sha256": "4a8827cad54611e5e68f9131510c05e28b9eced137c82d16d75c5db05a725834",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/p3_final/stage121p3/pipeline.py",
+      "destination": "src/lumbar_cf_report/p3/pipeline.py",
+      "source_sha256": "5c56f9292ca734d45719d5f398fa7e343c7ebb85dc2246ab72f1f8f62b797b6a",
+      "integrated_sha256": "15db325c1978cf8cba5303adce1b64857fdabe50853d6b6b02986c1098218624",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/stage23b/anchors.py",
+      "destination": "src/lumbar_cf_report/planner/anchors.py",
+      "source_sha256": "b094c09bb40a2cf7d95810cadc4531bc482f632039c8139e1264a733dc634b31",
+      "integrated_sha256": "b094c09bb40a2cf7d95810cadc4531bc482f632039c8139e1264a733dc634b31",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/stage23b/cf.py",
+      "destination": "src/lumbar_cf_report/planner/cf.py",
+      "source_sha256": "077336e14a1fbe8f263bf63129c58978cf0506fe09c20a3ef53de3790c0aedad",
+      "integrated_sha256": "077336e14a1fbe8f263bf63129c58978cf0506fe09c20a3ef53de3790c0aedad",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/stage23b/data.py",
+      "destination": "src/lumbar_cf_report/planner/data.py",
+      "source_sha256": "85395cbf37e971351cf8ddd2515eb82da4277ccf1785da5eb60bd4eb69b206f8",
+      "integrated_sha256": "85395cbf37e971351cf8ddd2515eb82da4277ccf1785da5eb60bd4eb69b206f8",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/stage23b/io.py",
+      "destination": "src/lumbar_cf_report/planner/io.py",
+      "source_sha256": "86bd907021e8b07116257fcfce1ebd32765a74053831d377f5148b9bdf057edd",
+      "integrated_sha256": "86bd907021e8b07116257fcfce1ebd32765a74053831d377f5148b9bdf057edd",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/stage23b/metrics.py",
+      "destination": "src/lumbar_cf_report/planner/metrics.py",
+      "source_sha256": "c1ee39c42ec0203aa66b9ce03b57172e894dbc43a0dd31eefd1cf729fd3afe88",
+      "integrated_sha256": "c1ee39c42ec0203aa66b9ce03b57172e894dbc43a0dd31eefd1cf729fd3afe88",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/stage23b/model.py",
+      "destination": "src/lumbar_cf_report/planner/model.py",
+      "source_sha256": "937619ece8b8b4406f671783b7a9f543de7d8562f975a41af0bd297b9c716e5a",
+      "integrated_sha256": "937619ece8b8b4406f671783b7a9f543de7d8562f975a41af0bd297b9c716e5a",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/stage23b/original_p3_replay.py",
+      "destination": "src/lumbar_cf_report/planner/original_p3_replay.py",
+      "source_sha256": "ff1b9cde32f7a33bf18f433f17bd7faf2f61f711b1ce7ae94c14babfd2cf0715",
+      "integrated_sha256": "8338fb611dc79646999f11a0d0b544b3795a494b6e3d03a34d950be0791b8353",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/stage23b/p3_replay.py",
+      "destination": "src/lumbar_cf_report/planner/p3_replay.py",
+      "source_sha256": "6b23ca28844fef637ceee7ef190ad11c527e089743aa8b3bc9921a170d39e30b",
+      "integrated_sha256": "6b23ca28844fef637ceee7ef190ad11c527e089743aa8b3bc9921a170d39e30b",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/stage23b/phasea.py",
+      "destination": "src/lumbar_cf_report/planner/phasea.py",
+      "source_sha256": "4f6125713ed19a0c50ec1215627b5295ac67d31c5ef67f82ef79e92323c0b761",
+      "integrated_sha256": "4f6125713ed19a0c50ec1215627b5295ac67d31c5ef67f82ef79e92323c0b761",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/stage23b/planner_legacy.py",
+      "destination": "src/lumbar_cf_report/planner/planner_legacy.py",
+      "source_sha256": "3b90bfec986b7990a792923f70565f0612bf5b84ec56b1429fc4ef6a01f192f1",
+      "integrated_sha256": "66ed5538c128833f0dacdbeaeb0a883f584a361325c51020aa48ed3a4318cc4a",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/stage23b/stage120.py",
+      "destination": "src/lumbar_cf_report/planner/stage120.py",
+      "source_sha256": "41a0be5bac5b916bd9047d65ee1dd05fc8d37051e26e30a3f05abfb1ac3df169",
+      "integrated_sha256": "41a0be5bac5b916bd9047d65ee1dd05fc8d37051e26e30a3f05abfb1ac3df169",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/stage23b/train_cf.py",
+      "destination": "src/lumbar_cf_report/planner/train_cf.py",
+      "source_sha256": "0926dbc22b6a762ac2bbed1340f36b02654940d5945f847477233aa0dfafb2ae",
+      "integrated_sha256": "0926dbc22b6a762ac2bbed1340f36b02654940d5945f847477233aa0dfafb2ae",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/stage23b/training.py",
+      "destination": "src/lumbar_cf_report/planner/training.py",
+      "source_sha256": "9fb86204fac6a0e77856cba019dd13630ec730e5ff3778ab7d239fd4fe025d6f",
+      "integrated_sha256": "9fb86204fac6a0e77856cba019dd13630ec730e5ff3778ab7d239fd4fe025d6f",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage3a_final_bridge_v1_3_resolved/stage3a/schema.py",
+      "destination": "src/lumbar_cf_report/bridge/schema.py",
+      "source_sha256": "56317e940b550fa953e3ccac5fd80a03c5915eda92126b7e18c867e4060e9f1c",
+      "integrated_sha256": "56317e940b550fa953e3ccac5fd80a03c5915eda92126b7e18c867e4060e9f1c",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage3a_final_bridge_v1_3_resolved/stage3a/plan_text.py",
+      "destination": "src/lumbar_cf_report/bridge/plan_text.py",
+      "source_sha256": "74658e5b3cc95bd30c9fde243d516ab51180a55d19a0ea442ea717bdc9adcdd9",
+      "integrated_sha256": "74658e5b3cc95bd30c9fde243d516ab51180a55d19a0ea442ea717bdc9adcdd9",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage3a_final_bridge_v1_3_resolved/stage3a/reference_resolver.py",
+      "destination": "src/lumbar_cf_report/bridge/reference_resolver.py",
+      "source_sha256": "f4b7820667ca005a014a064a17c2bc81838c35f2ec2c01ea587a6c407fc0b3c9",
+      "integrated_sha256": "f4b7820667ca005a014a064a17c2bc81838c35f2ec2c01ea587a6c407fc0b3c9",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage3a_final_bridge_v1_3_resolved/stage3a/io.py",
+      "destination": "src/lumbar_cf_report/bridge/io.py",
+      "source_sha256": "56f21fa6ae31d0f54e5e5fdc16ccd3d52bb5be6328fe13ebe23bf77fcbdce22f",
+      "integrated_sha256": "56f21fa6ae31d0f54e5e5fdc16ccd3d52bb5be6328fe13ebe23bf77fcbdce22f",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage3a_final_bridge_v1_3_resolved/stage3a/stage23_exact.py",
+      "destination": "src/lumbar_cf_report/bridge/stage23_exact.py",
+      "source_sha256": "aaef9b53632244b4249a884c7295fc3673d7c53402edf84c7ff4adfe1c65374a",
+      "integrated_sha256": "be27aed7cdab1b2a63442a181e7d392faa1e0b107217ad9ecaeefa03dfe6fcce",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/clinical16_parser/report_metrics.py",
+      "destination": "src/lumbar_cf_report/evaluation/report_metrics.py",
+      "source_sha256": "0958960cdb261fe3b1e55f4d5e012b6e1df2e100e54d4a161c3fd83201df38a0",
+      "integrated_sha256": "0958960cdb261fe3b1e55f4d5e012b6e1df2e100e54d4a161c3fd83201df38a0",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage3a_final_bridge_v1_3_resolved/stage3a/schema.py",
+      "destination": "src/lumbar_cf_report/evaluation/schema.py",
+      "source_sha256": "56317e940b550fa953e3ccac5fd80a03c5915eda92126b7e18c867e4060e9f1c",
+      "integrated_sha256": "56317e940b550fa953e3ccac5fd80a03c5915eda92126b7e18c867e4060e9f1c",
+      "adapted": false
+    },
+    {
+      "source": "02_supporting_lineage/realizer/sanitizer_source_dependency/r30v3/canonical.py",
+      "destination": "src/lumbar_cf_report/generation/canonical.py",
+      "source_sha256": "eaebda98e9e8b51b847cc41ac3faed86422b2a44393a7a364bc46703d8102291",
+      "integrated_sha256": "eaebda98e9e8b51b847cc41ac3faed86422b2a44393a7a364bc46703d8102291",
+      "adapted": false
+    },
+    {
+      "source": "02_supporting_lineage/realizer/sanitizer_source_dependency/r30v3/sanitize.py",
+      "destination": "src/lumbar_cf_report/generation/sanitize.py",
+      "source_sha256": "0cace4c44b2c513d568f15461b4bc8e1efa40e0c73ac175f6a71bb2c6683f081",
+      "integrated_sha256": "0cace4c44b2c513d568f15461b4bc8e1efa40e0c73ac175f6a71bb2c6683f081",
+      "adapted": false
+    },
+    {
+      "source": "02_supporting_lineage/realizer/sanitizer_source_dependency/r30v3/eval_bridge.py",
+      "destination": "src/lumbar_cf_report/generation/eval_bridge.py",
+      "source_sha256": "6113dad8716848ec9de20bdd61ec3e4f686692ac586b693325754de6762dfe1e",
+      "integrated_sha256": "6113dad8716848ec9de20bdd61ec3e4f686692ac586b693325754de6762dfe1e",
+      "adapted": false
+    },
+    {
+      "source": "02_supporting_lineage/realizer/v3_base_architecture/r31v3/core.py",
+      "destination": "src/lumbar_cf_report/generation/core.py",
+      "source_sha256": "a9aabb5d66040a60d59eacf86da6b22f3a9727e005b29b7603878094640ea74c",
+      "integrated_sha256": "a9aabb5d66040a60d59eacf86da6b22f3a9727e005b29b7603878094640ea74c",
+      "adapted": false
+    },
+    {
+      "source": "02_supporting_lineage/realizer/v3_base_architecture/r31v3/prompting.py",
+      "destination": "src/lumbar_cf_report/generation/prompting.py",
+      "source_sha256": "59c9bb28e99958acff862aeb08d38f41d1ff63260faf106470d9b74efa4a3c09",
+      "integrated_sha256": "59c9bb28e99958acff862aeb08d38f41d1ff63260faf106470d9b74efa4a3c09",
+      "adapted": false
+    },
+    {
+      "source": "02_supporting_lineage/realizer/v3_base_architecture/r31v3/precision_patch.py",
+      "destination": "src/lumbar_cf_report/generation/precision_patch.py",
+      "source_sha256": "c0fa54ce3f04c4c4a157f0400141869429ffdf80ba7e0e71e5bb25e4089a8c39",
+      "integrated_sha256": "c0fa54ce3f04c4c4a157f0400141869429ffdf80ba7e0e71e5bb25e4089a8c39",
+      "adapted": false
+    },
+    {
+      "source": "02_supporting_lineage/realizer/v3_base_architecture/r31v3/metrics.py",
+      "destination": "src/lumbar_cf_report/generation/metrics.py",
+      "source_sha256": "13711f9deac6028f3c12f13c23d5f706075a39e14b4da4def999e7a4fc389cad",
+      "integrated_sha256": "13711f9deac6028f3c12f13c23d5f706075a39e14b4da4def999e7a4fc389cad",
+      "adapted": false
+    },
+    {
+      "source": "02_supporting_lineage/realizer/v3_base_architecture/r31v3/selection.py",
+      "destination": "src/lumbar_cf_report/generation/selection.py",
+      "source_sha256": "7cf1d5bd2003ab10e1f4a727e386402aa8d496ef3cc9d4d7bf92fa4854196bf0",
+      "integrated_sha256": "7cf1d5bd2003ab10e1f4a727e386402aa8d496ef3cc9d4d7bf92fa4854196bf0",
+      "adapted": false
+    },
+    {
+      "source": "02_supporting_lineage/realizer/v3_1_patch/r31v31/generate.py",
+      "destination": "src/lumbar_cf_report/generation/generate.py",
+      "source_sha256": "dd63d4e9de8cf1874b1b585f8df354238606d749f8991f86051e0f335424cd0b",
+      "integrated_sha256": "dd63d4e9de8cf1874b1b585f8df354238606d749f8991f86051e0f335424cd0b",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/realizer_v3_2/final_patch/r31v32/data.py",
+      "destination": "src/lumbar_cf_report/generation/data.py",
+      "source_sha256": "afbf2ebeeb0fc6b2b6d1950f4b0d4864e40f15f88f2a80bf31f0877826e10fc8",
+      "integrated_sha256": "afbf2ebeeb0fc6b2b6d1950f4b0d4864e40f15f88f2a80bf31f0877826e10fc8",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/realizer_v3_2/final_patch/r31v32/modeling.py",
+      "destination": "src/lumbar_cf_report/generation/modeling.py",
+      "source_sha256": "c9399e74a478736b29781a9876d41585587d0efb15227f2af33e5f5dc1940031",
+      "integrated_sha256": "c9399e74a478736b29781a9876d41585587d0efb15227f2af33e5f5dc1940031",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/realizer_v3_2/final_patch/r31v32/scaffold.py",
+      "destination": "src/lumbar_cf_report/generation/scaffold.py",
+      "source_sha256": "988312cf8b6327e2cf87c27a6c8a2da8d921bf97f2d01229049dd88f2fb820c5",
+      "integrated_sha256": "988312cf8b6327e2cf87c27a6c8a2da8d921bf97f2d01229049dd88f2fb820c5",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/realizer_v3_2/final_patch/r31v32/train.py",
+      "destination": "src/lumbar_cf_report/generation/train.py",
+      "source_sha256": "2baa2dde80f903557e03ef3a3820d1cd12dcb5640926c2081e49b26109ee1347",
+      "integrated_sha256": "2baa2dde80f903557e03ef3a3820d1cd12dcb5640926c2081e49b26109ee1347",
+      "adapted": false
+    },
+    {
+      "source": "02_supporting_lineage/selector/s4_v2_1_language_patch/r32s4v21/features.py",
+      "destination": "src/lumbar_cf_report/selection/features.py",
+      "source_sha256": "893fe35c18d968bdd08db5e018051370a25b4c570020473f1d667e4577c41fed",
+      "integrated_sha256": "893fe35c18d968bdd08db5e018051370a25b4c570020473f1d667e4577c41fed",
+      "adapted": false
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/scripts/01_prepare_data.py",
+      "destination": "scripts/planner/01_prepare_data.py",
+      "source_sha256": "6e0ece39876b10a483a0a7df30dfa1f95f80bc3a0a92d01f17d421a72504af76",
+      "integrated_sha256": "ce0986b44b510398c032bf142509863500c7b22b6f5ccf845f8b4b5a690a2ee7",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/scripts/02_recover_exact_p3.py",
+      "destination": "scripts/planner/02_recover_exact_p3.py",
+      "source_sha256": "007e57f5ea8cdd118d166e25f5da3b29bde8d9736e23b16504e3fe2ad917a826",
+      "integrated_sha256": "5401073c03eb011fb1841f02426a9945eff825792699458d9fcd26f0e8e6ea13",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/scripts/03_baseline_cf_audit.py",
+      "destination": "scripts/planner/03_baseline_cf_audit.py",
+      "source_sha256": "5bb9966402dff8fda53a395e94a92024bf37e951c3f60971aa6fbf8fb5aeadcc",
+      "integrated_sha256": "9c6750872cea85f24b8e81f467d3b021aa099ab0e7ef7121502997075008b38d",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/scripts/04_train_cf_modes.py",
+      "destination": "scripts/planner/04_train_cf_modes.py",
+      "source_sha256": "771285d61d90bde8f1342122b0aa99ab5a5af6d05af3d66117db5dd8a2b91f99",
+      "integrated_sha256": "853fec114b640325a6e0aec5ce02904c587f2f994a322bff5b6afa080e9a5adc",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/scripts/05_select_cf_candidate.py",
+      "destination": "scripts/planner/05_select_cf_candidate.py",
+      "source_sha256": "3c69173657203dbec4b69e46b611d15fd7588ba602a9c47bd4b1fc5b24ce058f",
+      "integrated_sha256": "ce17ab5ec04d9f516ec81ec526bf8f5e365600f90bdd57f001723980b5a61b2c",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/scripts/05_select_context_candidate.py",
+      "destination": "scripts/planner/05_select_context_candidate.py",
+      "source_sha256": "a2bb704f1019411a188b23bd10502b012c4756a22eb135323ce40d890891b43b",
+      "integrated_sha256": "3d95f2585c6cba4a01cc48632f841e5ed001889ab48f12df0ed865df9c17e0ca",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/scripts/05b_nerve_head_recovery.py",
+      "destination": "scripts/planner/05b_nerve_head_recovery.py",
+      "source_sha256": "1eee775660a1305585f4e7d42942d778a924a2f4e9fecb2cc860f811f1d8a7cd",
+      "integrated_sha256": "896e9604f914323d11661371eb86112d641caf08b8b9346f6ecea3563f460150",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/scripts/06_recover_internal_p3.py",
+      "destination": "scripts/planner/06_recover_internal_p3.py",
+      "source_sha256": "ec29b3fa8864d9111fdae88903eeb5b42f08cfa6e6d989e33f14ef0e3485ac6b",
+      "integrated_sha256": "a857a14b5c32b59f82e5a2e17c8c1c99994e063f8a55af072abf0383b802ca1c",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/scripts/07_internal_factual_eval.py",
+      "destination": "scripts/planner/07_internal_factual_eval.py",
+      "source_sha256": "a0495bbc389036e94502da3a5d5c184d65fc3faa0dfc7c828fe87ca3f01bfbdb",
+      "integrated_sha256": "2af352d68b86bce65ca7e87654d76914115c449e12cd9f1bd699e1387f7722ae",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/stage2_3_v1_7_resolved/scripts/08_internal_cf_eval.py",
+      "destination": "scripts/planner/08_internal_cf_eval.py",
+      "source_sha256": "7dc79bfddfa8fa624c8536e55105353d5a61e04c9e564f46e1531bbe9f2c8f95",
+      "integrated_sha256": "f3a7a8b5facfb4614f8bd8f3db28a12ec5e6775e0601cd7397bb5cf69a27f78d",
+      "adapted": true
+    },
+    {
+      "source": "01_final_workflow/p3_final/configs/stage1_21_P3_config.json",
+      "destination": "configs/p3.json",
+      "source_sha256": "89bdff45e82141dd4fc8b7889b5832497ab0b7afbf7aaaba2d497825d3320f95",
+      "integrated_sha256": "5c95eaff325ba92abbd6e742b7f491047a38ae5d53e7351364533d884a708822",
+      "adapted": true
+    }
+  ],
+  "owner_decision": "2026-09-20: await exact original v2.2 package/config; do not infer TextListwise or substitute v2.1/v2.3."
+}

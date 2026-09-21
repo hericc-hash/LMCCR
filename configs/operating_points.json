@@ -1,0 +1,13 @@
+{
+  "version": "paper-operating-points-v1",
+  "status": "FROZEN_AFTER_INTERNAL100_SELECTION",
+  "selection_cohort": "Internal100",
+  "independent49_used_for_selection": false,
+  "thresholds": {
+    "lordosis": 0.50,
+    "disc": 0.50,
+    "stenosis": 0.50,
+    "nerve": 0.28,
+    "structure": 0.50
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "weights": [
+    {
+      "path": "weights/coordinate_prior/hr320_v7.pt",
+      "bytes": 61779403,
+      "sha256": "3c7158a9b5d96f2e7d3e7c7eeaea2158285fe9313ea1401eedfb472872f8718d",
+      "storage": "lfs"
+    },
+    {
+      "path": "weights/visual_evidence/lumbar_visual_evidence.pt",
+      "bytes": 16858707,
+      "sha256": "2655b42913ad0dffd9b4562e5546a912bc576fbee20b0e56b3adf8602e908212",
+      "storage": "lfs"
+    },
+    {
+      "path": "weights/apreb/apreb.pt",
+      "bytes": 2100434,
+      "sha256": "bcc4fc96dc2d4084928f6189c1727bf61052864ee4b1407db018b1bd2181c430",
+      "storage": "git"
+    },
+    {
+      "path": "weights/ccmrt/ccmrt.pt",
+      "bytes": 4155650,
+      "sha256": "f9cdcb099e7e19a8a9c32eca2118bf16d5d62fddfbc8f444a029120caa8de210",
+      "storage": "git"
+    },
+    {
+      "path": "weights/clinical_planner/05_stage2_3B_selected_candidate.pt",
+      "bytes": 2636453,
+      "sha256": "2a58bcbc2023151174c7461286033b5fc2c67960b52ddbd8b3c8b313f6c1ee2d",
+      "storage": "git"
+    },
+    {
+      "path": "weights/report_realizer/language_adapter/adapter_model.safetensors",
+      "bytes": 47224624,
+      "sha256": "4d557e34494a8e7dd748db322458d5f7630f022b7301ad5b27f8b39b748d226b",
+      "storage": "lfs"
+    },
+    {
+      "path": "weights/report_realizer/dual_channel_adapter/adapter_model.safetensors",
+      "bytes": 47224624,
+      "sha256": "6773a6cb302974dfb6e834303fbbb7c122d429d5fbe783c1fa7158afacb398a2",
+      "storage": "lfs"
+    },
+    {
+      "path": "weights/report_realizer/scaffold_adapter/adapter_model.safetensors",
+      "bytes": 47224624,
+      "sha256": "64a3b1d4e8bcc18da10c8066d8eefe8d26e52f252a6428c409014ee9c0959ff8",
+      "storage": "lfs"
+    },
+    {
+      "path": "weights/selector/fact_seed20260931.pt",
+      "bytes": 191245,
+      "sha256": "5d85bd0f98608834233851a1d4fda4ea92f86e62684de18a767900de0ba86bc5",
+      "storage": "git"
+    },
+    {
+      "path": "weights/selector/text_listwise_seed20260931.pt",
+      "bytes": 2203125,
+      "sha256": "098e8effb7161b6d6fafd42faae430a4c215d16b93e8eb8c110a1d471d43fdee",
+      "storage": "git"
+    },
+    {
+      "path": "weights/selector/fact_seed20260932.pt",
+      "bytes": 191245,
+      "sha256": "167b4112769ea3d6c0bc79cd01f373df0f557d83da435b4d63028df37652083f",
+      "storage": "git"
+    },
+    {
+      "path": "weights/selector/fact_seed20260933.pt",
+      "bytes": 191245,
+      "sha256": "5bca97522765a3f199bedd992ae1cc30d42b627e218804dedc0eab46cc45930c",
+      "storage": "git"
+    },
+    {
+      "path": "weights/selector/text_listwise_seed20260932.pt",
+      "bytes": 2203125,
+      "sha256": "6356adcfea3478f9095a3b49535ba5eaf09800720d6cb3f636543ef1ec8cc5ea",
+      "storage": "git"
+    },
+    {
+      "path": "weights/selector/text_listwise_seed20260933.pt",
+      "bytes": 2203125,
+      "sha256": "a321f2744cadfd6e4add4ad390f36b976399ac99f571b8ef18cc40e819294fb6",
+      "storage": "git"
+    },
+    {
+      "path": "weights/visual_experts/disc/best_common.pt",
+      "bytes": 139007305,
+      "sha256": "fd80bf81add01d5ce11eb8583553c3e005c745f21696dcb94fa1f0b145c0cae4",
+      "storage": "lfs"
+    },
+    {
+      "path": "weights/visual_experts/stenosis/best_fused_common.pt",
+      "bytes": 192012251,
+      "sha256": "a9189da869871bf54c2368f7a6235bc993ec645754bfdc74a632917f5c0005f8",
+      "storage": "lfs"
+    },
+    {
+      "path": "weights/visual_experts/nerve/best_fused_common.pt",
+      "bytes": 279060021,
+      "sha256": "195fb838a730b057effa36ea42fa96fd75aeec9d3fc3fbb44ce3fb7b2f1cd5a8",
+      "storage": "lfs"
+    },
+    {
+      "path": "weights/direct_auxiliary_planner/best_stage1_18c_explicit_clinical_mediator.pt",
+      "bytes": 63484281,
+      "sha256": "535ad717b1d0fae4fc49c8d1018b069dabad764cf92a85031cefb863af89daaf",
+      "storage": "lfs"
+    },
+    {
+      "path": "weights/direct/epoch_2/direct_prefix.pt",
+      "bytes": 24304308,
+      "sha256": "49bfce1952d14b730bfa125879eebdba99c5ae1f4e795ba3fc085ca3fe0e4a4f",
+      "storage": "lfs"
+    },
+    {
+      "path": "weights/direct/epoch_2/lora/adapter_model.safetensors",
+      "bytes": 47224624,
+      "sha256": "75c1aa20667428b2697b5ae1cc3b6e90baacc339634977456d38cf57c6338bcc",
+      "storage": "lfs"
+    },
+    {
+      "path": "weights/runtime_assets/coordinate_normalizer.pt",
+      "bytes": 4501,
+      "sha256": "64c1e53f35c8ad5639671f46b52fb18e3beb10afd4db4d2d7278bea8bf2f85e8",
+      "storage": "git"
+    },
+    {
+      "path": "weights/runtime_assets/lordosis_geometry_constants.pt",
+      "bytes": 3253,
+      "sha256": "4a3ec76f289e065890e9bc6c3f719737dafad218631caf72bdc0b519725d62a1",
+      "storage": "git"
+    }
+  ]
+}

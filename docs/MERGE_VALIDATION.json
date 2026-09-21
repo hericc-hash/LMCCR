@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-20",
+  "python": "3.12.14",
+  "torch": "2.14.0+cpu",
+  "numpy": "2.5.3",
+  "pytest": "8.4.2",
+  "scikit_learn": "1.9.1",
+  "device": "CPU",
+  "pytest_passed": 27,
+  "compileall": "PASS",
+  "code_only_setup": "PASS",
+  "cli_help_checks": 13,
+  "cli_help_failures": 0,
+  "pip_check": "PASS",
+  "final_workflow": "PENDING_SELECTOR_SOURCE_AND_FROZEN_CONFIGS",
+  "real_weights_or_patient_data_used": false
+}
